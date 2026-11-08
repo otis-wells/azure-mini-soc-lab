@@ -21,7 +21,7 @@ The detection uses Windows Security Event ID 4625 and custom KQL logic to extrac
 | MITRE Technique | T1110 – Brute Force |
 | Detection Threshold | 3 or more failures |
 | Time Window | 5 minutes |
-| Monitored Endpoint | soc-win01 |
+| Monitored Endpoint | `soc-win01` |
 
 ## Detection Logic
 
