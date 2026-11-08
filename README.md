@@ -170,10 +170,9 @@ azure-mini-soc-lab/
 ├── incident-reports/
 │
 ├── screenshots/
-│   ├── architecture/
 │   ├── configuration/
 │   ├── detection-rules/
-│   └── incidents/
+│   └── alert-evidence/
 │
 └── LICENSE
 </pre>
