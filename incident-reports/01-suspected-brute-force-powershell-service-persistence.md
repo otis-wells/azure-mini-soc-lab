@@ -27,7 +27,6 @@ The activity was intentionally generated as part of a controlled SOC detection e
 | Account | `SOC-TestUser` |
 | Source IP | `127.0.0.1` |
 | Associated process | `powershell.exe` |
-| Process ID | `6424` |
 | Service | `Security Health Monitor` |
 | Service executable | `C:\Windows\Temp\SecurityHealthMonitor.exe` |
 | Detection source | Microsoft Defender / Microsoft Sentinel |
@@ -37,8 +36,6 @@ The activity was intentionally generated as part of a controlled SOC detection e
 The source IP `127.0.0.1` is the loopback address. In this lab, the authentication activity was generated locally; it should not be interpreted as evidence of a remote source.
 
 ## 3. Alerts Reviewed
-
-Six detection scenarios contributed to the investigation.
 
 | Detection | Severity | Event ID(s) | Initial assessment |
 |---|---:|---:|---|
@@ -57,7 +54,6 @@ Six detection scenarios contributed to the investigation.
 | Host | `soc-win01` | Affected endpoint |
 | Source IP | `127.0.0.1` | Local source of authentication activity |
 | Process | `powershell.exe` | Associated with suspicious execution |
-| Process ID | `6424` | Used to correlate PowerShell activity with process creation |
 | Service | `Security Health Monitor` | Newly created service |
 | Service path | `C:\Windows\Temp\SecurityHealthMonitor.exe` | Temporary, user-writable executable location |
 
@@ -140,8 +136,6 @@ No evidence of data exfiltration, lateral movement or destructive activity was o
 | [T1543.003](https://attack.mitre.org/techniques/T1543/003/) | Create or Modify System Process: Windows Service | Windows service creation was detected following PowerShell activity. The suspicious service detection identified characteristics associated with persistence, including execution from a temporary, user-writable location. |
 
 ## 9. Recommended Response
-
-The following actions were documented as the recommended response if equivalent activity were identified in a production environment.
 
 ### 9.1 Contain the affected account
 
@@ -247,7 +241,7 @@ Event
 
 ## 11. Verdict and Disposition
 
-**Verdict: Benign / False Positive** was the initial wording in the investigation document. The final incident disposition was recorded as:
+**Verdict: Benign / False Positive** 
 
 **Benign Positive – Suspicious activity / potential endpoint compromise, confirmed as simulated lab activity.**
 
@@ -255,13 +249,9 @@ The detections correctly identified the behaviours intentionally generated durin
 
 ## 12. Final Incident Summary
 
-The investigation demonstrated how multiple detections can be correlated to build a broader understanding of endpoint activity.
-
 The sequence began with repeated failed authentication attempts against `SOC-TestUser`, followed by a successful authentication. PowerShell activity was then observed, including script content matching suspicious indicators and process telemetry showing execution of `whoami`. Finally, a Windows service was created with its executable located in a temporary directory.
 
 Although the sequence was consistent with credential attack, command execution and service-based persistence behaviours, the activity was intentionally simulated. The incident was therefore closed as a **Benign Positive**.
-
-The exercise demonstrated the value of combining authentication logs, PowerShell Script Block Logging, Sysmon process telemetry and Windows service creation events to investigate activity across multiple stages.
 
 ---
 
