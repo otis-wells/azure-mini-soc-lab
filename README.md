@@ -173,8 +173,7 @@ azure-mini-soc-lab/
 │   ├── configuration/
 │   ├── analytics-rules/
 │   └── alert-evidence/
-│
-└── LICENSE
+
 </pre>
 
 <h2>Project Status</h2>
