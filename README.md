@@ -171,7 +171,7 @@ azure-mini-soc-lab/
 │
 ├── screenshots/
 │   ├── configuration/
-│   ├── detection-rules/
+│   ├── analytics-rules/
 │   └── alert-evidence/
 │
 └── LICENSE
