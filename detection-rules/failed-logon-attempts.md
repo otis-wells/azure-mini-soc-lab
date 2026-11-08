@@ -118,7 +118,7 @@ Event
 | Category | Mapping |
 |---|---|
 | Tactic | Credential Access |
-| Technique | T1110 – Brute Force |
+| Technique | [T1110 – Brute Force](https://attack.mitre.org/techniques/T1110/) |
 
 This detection supports the identification of repeated authentication attempts that may indicate password guessing or brute-force activity.
 
