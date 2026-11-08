@@ -13,30 +13,32 @@ Microsoft Sentinel uses the collected telemetry to support security monitoring, 
 
 ```mermaid
 flowchart TD
-A["Windows Virtual Machine (soc-win01)"]
-B["Windows Security Events"]
-C["Sysmon Telemetry"]
-D["PowerShell Operational Logs"]
-E["Azure Monitor Agent (AMA)"]
-F["Data Collection Rules (DCR)"]
-G["Log Analytics Workspace (LAW-SOC-Lab1)"]
-H["Microsoft Sentinel"]
-I["Custom Detection Rules"]
-J["Security Alerts"]
-K["Incident Investigation"]
+    A["Windows Virtual Machine (soc-win01)"]
+    B["Windows Security Events"]
+    C["Sysmon Telemetry"]
+    D["PowerShell Operational Logs"]
+    E["Azure Monitor Agent (AMA)"]
+    F["Data Collection Rules (DCR)"]
+    G["Log Analytics Workspace (LAW-SOC-Lab1)"]
+    H["Microsoft Sentinel"]
+    I["Custom Detection Rules"]
+    J["Security Alerts"]
+    K["Incident Investigation"]
 
-A --> B
-A --> C
-A --> D
-B --> E
-C --> E
-D --> E
-E --> F
-F --> G
-G --> H
-H --> I
-I --> J
-J --> K
+    A --> B
+    A --> C
+    A --> D
+
+    B --> E
+    C --> E
+    D --> E
+
+    E --> F
+    F --> G
+    G --> H
+    H --> I
+    I --> J
+    J --> K
 ```
 
 ## Core Components
