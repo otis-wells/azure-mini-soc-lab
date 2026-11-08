@@ -21,6 +21,17 @@ Using Microsoft Sentinel, Azure Log Analytics, Microsoft Defender and a Windows 
 The project demonstrates practical experience in identifying suspicious behaviour, analysing security events, mapping detections to the MITRE ATT&CK framework and recommending appropriate incident response actions.
 </p>
 
+
+<h2>Documentation</h2>
+
+<ul>
+  <li><a href="documentation/architecture.md">SOC Architecture</a></li>
+  <li><a href="documentation/environment-setup.md">Environment Setup</a></li>
+  <li><a href="documentation/data-collection.md">Data Collection</a></li>
+  <li><a href="documentation/detection-engineering.md">Detection Engineering</a></li>
+</ul>
+
+
 <h2>Technology Stack</h2>
 
 <table>
@@ -141,10 +152,29 @@ Generated alerts were investigated to understand the underlying activity, assess
 azure-mini-soc-lab/
 │
 ├── README.md
+│
 ├── documentation/
+│   ├── architecture.md
+│   ├── environment-setup.md
+│   ├── data-collection.md
+│   └── detection-engineering.md
+│
 ├── detection-rules/
+│   ├── failed-logon-attempts.md
+│   ├── brute-force-successful-logon.md
+│   ├── powershell-execution.md
+│   ├── suspicious-powershell.md
+│   ├── service-creation.md
+│   └── suspicious-service-creation.md
+│
 ├── incident-reports/
+│
 ├── screenshots/
+│   ├── architecture/
+│   ├── configuration/
+│   ├── detection-rules/
+│   └── incidents/
+│
 └── LICENSE
 </pre>
 
