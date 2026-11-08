@@ -45,7 +45,7 @@ flowchart TD
 
 | Component | Description |
 |---|---|
-| Azure Virtual Machine | Hosts the simulated Windows endpoint used to generate security activity. |
+| Virtual Machine | Hosts the simulated Windows endpoint used to generate security activity. |
 | Azure Monitor Agent (AMA) | Collects configured telemetry from the virtual machine. |
 | Data Collection Rules (DCR) | Define which events are collected and where they are sent. |
 | Log Analytics Workspace | Central repository for collected security telemetry and log analysis. |
